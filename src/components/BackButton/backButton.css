@@ -1,0 +1,32 @@
+.backButtonContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 50px 0px 20px 50px;
+  cursor: pointer;
+  background-color: transparent;
+  border-style: none;
+}
+.backButtonContainer img {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .backButtonContainer {
+    padding: 15px;
+  }
+  .backButtonContainer img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .backButtonContainer {
+    padding: 10px;
+  }
+  .backButtonContainer img {
+    width: 20px;
+    height: 20px;
+  }
+}

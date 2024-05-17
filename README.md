@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Movie and TV Show App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a web application designed to showcase the top 10 rated TV shows and movies, with functionalities for searching and viewing detailed information about individual items. It uses [TheMovieDB API](https://developers.themoviedb.org/3) for fetching data and is built with React, Typescript, and various other modern web development tools.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Display top 10 rated TV shows and movies.
+- Search functionality for both TV shows and movies.
+- Detailed view for individual TV shows and movies, including trailer video if available.
+- Live search.
+- Persistent state management using React Context.
+- Responsive design.
+- Clean and modular architecture.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technical Requirements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React Version**: 16.8 or later
+- **State Management**: React Context
+- **Routing**: React Router
+- **API Consumption**: Axios
+- **Language**: Typescript
+- **Testing**: React Testing Library, Jest
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[node.js](https://nodejs.org/) is required to get npm.
 
-### `npm run build`
+If you would like to download the code and try it for yourself:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    bashCopy codegit
+    `https://github.com/sanjas5/movie-shows-app.git`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2.  Navigate to the project directory:
 
-### `npm run eject`
+    bashCopy code
+    `cd movie-shows-app`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3.  Add the .env file in application and add base url and API key:
+    Create a `.env` file in the root of the project and add next two lines:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        REACT_APP_BASE_URL = https://api.themoviedb.org/3
+        REACT_APP_API_KEY = _your_api_key_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4.  Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    bashCopy code
+    `npm install`
 
-## Learn More
+5.  Start project:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    bashCopy code
+    `npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+### Displaying Top 10 Rated TV Shows and Movies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The app defaults to displaying the top 10 TV shows on load.
+- Use the tab navigation to switch between TV shows and movies.
 
-### Analyzing the Bundle Size
+### Search Functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Search input is debounced with a 1-second delay after the user stops typing.
+- Minimum 3 characters are required to trigger the search.
+- Search results appear below the search box.
+- Switching tabs while searching will update the results based on the current search term.
 
-### Making a Progressive Web App
+### Detailed View
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Clicking on a TV show or movie navigates to the detailed view page.
+- The detailed view includes a cover image or trailer video (if available) and basic information about the selected item.
+- A back button returns the user to their previous state.
 
-### Advanced Configuration
+## Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Tests are written using Jest and React Testing Library. To run the tests:
 
-### Deployment
+bashCopy code `npm test`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Linting
 
-### `npm run build` fails to minify
+ESLint is used for code quality and consistency. To run the linting process:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bashCopy code `npm run lint`
+
+## Additional Features
+
+- **Responsive Design**: The app is responsive and works on various screen sizes.
+- **Styling**: Custom CSS for styling without using CSS frameworks.
+
+## Contact
+
+- **Author**: Sanja Kadic
+- **Email**: kadicsanja5@gmail.com
+- **GitHub**: [sanjas5](https://github.com/sanjas5)
+
+Thank you for checking out this project!
