@@ -7,7 +7,7 @@ function EmptyPage() {
     <div className="emptyPageContainer">
       <Navbar />
       <div className="emptyPageContent">
-        <img src={noResults} alt="" />
+        <img src={noResults} alt="no results" />
         Nothing to load. Sorry...
       </div>
     </div>

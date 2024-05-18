@@ -17,8 +17,8 @@ import { IShow } from "../entities/IShow";
 interface ISearchContext {
   searchTerm: string;
   updateSearchTerm: (term: string) => void;
-  searchMoviesResults: any[];
-  searchShowsResults: any[];
+  searchMoviesResults: IMovie[];
+  searchShowsResults: IShow[];
   currentTab: string;
   totalResults: number | null;
   loading: boolean;
@@ -34,7 +34,7 @@ export const SearchProvider: React.FC<{ children: ReactNode }> = ({
   const [searchMoviesResults, setSearchMoviesResults] = useState<IMovie[]>([]);
   const [searchShowsResults, setSearchShowsResults] = useState<IShow[]>([]);
   const [currentTab, setCurrentTab] = useState<string>(
-    window.location.pathname.slice(1)
+    window.location.pathname.slice(1),
   );
   const [totalResults, setTotalResults] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -58,7 +58,7 @@ export const SearchProvider: React.FC<{ children: ReactNode }> = ({
       searchTerm,
       setSearchMoviesResults,
       setTotalResults,
-      setLoading
+      setLoading,
     );
   }, [searchTerm, setTotalResults, setLoading]);
 
@@ -68,7 +68,7 @@ export const SearchProvider: React.FC<{ children: ReactNode }> = ({
       searchTerm,
       setSearchShowsResults,
       setTotalResults,
-      setLoading
+      setLoading,
     );
   }, [searchTerm, setSearchShowsResults, setTotalResults, setLoading]);
 
@@ -91,7 +91,7 @@ export const SearchProvider: React.FC<{ children: ReactNode }> = ({
         searchTerm,
         setSearchShowsResults,
         setTotalResults,
-        setLoading
+        setLoading,
       );
     } else if (currentTab === "movies") {
       if (searchTerm.length >= 3) {
@@ -103,7 +103,7 @@ export const SearchProvider: React.FC<{ children: ReactNode }> = ({
         searchTerm,
         setSearchMoviesResults,
         setTotalResults,
-        setLoading
+        setLoading,
       );
     }
 

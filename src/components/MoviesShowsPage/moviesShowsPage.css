@@ -47,7 +47,7 @@
 .moviesShowsContent:hover {
   background-color: rgba(126, 120, 120, 0.7);
 }
-.movieImg {
+.mediaImg {
   width: 100%;
   height: 90%;
   object-fit: contain;

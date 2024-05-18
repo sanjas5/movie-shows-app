@@ -17,9 +17,9 @@ function ShowsPage() {
           <a href={`/tv/${movie.id}`} key={index}>
             <div className="moviesShowsContent">
               <img
-                className="movieImg"
+                className="mediaImg"
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                alt="movie"
+                alt="show"
               />
               <div className="mediaTitle">{movie.name}</div>
             </div>
