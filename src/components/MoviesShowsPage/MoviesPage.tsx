@@ -21,12 +21,12 @@ function MoviesPage() {
             <div className="moviesShowsContent">
               {movie.poster_path ? (
                 <img
-                  className="movieImg"
+                  className="mediaImg"
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt="movie"
                 />
               ) : (
-                <img className="movieImg" src={noImage} alt="movie" />
+                <img className="mediaImg" src={noImage} alt="movie" />
               )}
 
               <div className="mediaTitle">{movie.title}</div>
