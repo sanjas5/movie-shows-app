@@ -1,5 +1,7 @@
 # Movie and TV Show App
 
+Click here to see [LIVE DEMO](https://staging.d25t44g13j97rq.amplifyapp.com)
+
 ## Overview
 
 This project is a web application designed to showcase the top 10 rated TV shows and movies, with functionalities for searching and viewing detailed information about individual items. It uses [TheMovieDB API](https://developers.themoviedb.org/3) for fetching data and is built with React, Typescript, and various other modern web development tools.
@@ -16,7 +18,8 @@ This project is a web application designed to showcase the top 10 rated TV shows
 
 ## Technical Requirements
 
-- **React Version**: 16.8 or later
+- **Node Version**: 21.7.1
+- **React Version**: 18.3.1
 - **State Management**: React Context
 - **Routing**: React Router
 - **API Consumption**: Axios

@@ -10,7 +10,11 @@ jest.mock("../../utils/fetchData", () => ({
   getMovie: jest.fn(),
 }));
 
-jest.mock("../BackButton/BackButton", () => () => <div>Back Button</div>);
+jest.mock("../BackButton/BackButton", () => {
+  const BackButton = () => <div>BackButton Component</div>;
+  BackButton.displayName = "BackButton Component";
+  return BackButton;
+});
 
 const mockMovie: IMovie = {
   id: 1,

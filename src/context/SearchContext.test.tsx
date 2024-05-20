@@ -50,9 +50,9 @@ describe("SearchProvider", () => {
       </SearchProvider>,
     );
 
-    expect(screen.getByTestId("search-term")).toHaveTextContent(""); // Search term initially empty
-    expect(screen.getByTestId("current-tab")).toHaveTextContent("shows"); // Default tab is 'shows'
-    expect(screen.getByTestId("total-results")).toHaveTextContent(""); // Total results initially empty
-    expect(screen.getByTestId("loading")).toHaveTextContent("Loading"); // Initially loading
+    expect(screen.getByTestId("search-term")).toHaveTextContent("");
+    expect(screen.getByTestId("current-tab")).toHaveTextContent("shows");
+    expect(screen.getByTestId("total-results")).toHaveTextContent("");
+    expect(screen.getByTestId("loading")).toHaveTextContent("Loading");
   });
 });

@@ -4,12 +4,15 @@ import { MemoryRouter, Routes, Route } from "react-router-dom";
 import ShowDetails from "./ShowDetails";
 import { getShow } from "../../utils/fetchData";
 import { IShow } from "../../entities/IShow";
-
 jest.mock("../../utils/fetchData", () => ({
   getShow: jest.fn(),
 }));
 
-jest.mock("../BackButton/BackButton", () => () => <div>Back Button</div>);
+jest.mock("../BackButton/BackButton", () => {
+  const BackButton = () => <div>BackButton Component</div>;
+  BackButton.displayName = "BackButton Component";
+  return BackButton;
+});
 
 const mockShow: IShow = {
   id: 1,

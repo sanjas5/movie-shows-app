@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import { SearchProvider } from "./context/SearchContext";
 import MovieDetails from "./components/DetailsPage/MovieDetails";

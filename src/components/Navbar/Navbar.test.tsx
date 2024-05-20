@@ -1,8 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import Navbar from "./Navbar";
 
-jest.mock("./Tabs/Tabs.tsx", () => () => <div>Tabs Component</div>);
-jest.mock("./SearchBar/SearchBar", () => () => <div>SearchBar Component</div>);
+jest.mock("./Tabs/Tabs", () => {
+  return function Tabs() {
+    return <div>Tabs Component</div>;
+  };
+});
+
+jest.mock("./SearchBar/SearchBar.tsx", () => {
+  return function SearchBar() {
+    return <div>SearchBar Component</div>;
+  };
+});
 
 describe("Navbar", () => {
   it("renders Tabs component", () => {
