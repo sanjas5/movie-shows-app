@@ -1,6 +1,7 @@
 # Movie and TV Show App
 
 Click here to see [LIVE DEMO](https://staging.d25t44g13j97rq.amplifyapp.com)
+![landingShowsPage](https://github.com/sanjas5/movie-shows-app/assets/89469159/951ae719-448a-4594-9e69-b6e587965c3d)
 
 ## Overview
 
