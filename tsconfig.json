@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "jsx": "react-jsx",
     "strict": true,
-    "module": "esnext",
+    "module": "commonjs",
+    "rootDir": "./src",
     "moduleResolution": "node",
+    "baseUrl": "./",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -15,7 +17,10 @@
     "isolatedModules": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "sourceMap": true,
+    "outDir": "./dist"
   },
   "include": ["src"]
 }

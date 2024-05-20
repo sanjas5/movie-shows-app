@@ -8,6 +8,7 @@ function SearchBar() {
     <div>
       <div className="searchBarContainer">
         <input
+          autoFocus
           type="text"
           value={searchTerm}
           onChange={handleInputChange}

@@ -25,8 +25,19 @@ interface ISearchContext {
   handleTabChange: (tab: string) => void;
   handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
+const defaultContextValues: ISearchContext = {
+  searchTerm: "",
+  updateSearchTerm: () => {},
+  searchMoviesResults: [],
+  searchShowsResults: [],
+  currentTab: "shows",
+  totalResults: null,
+  loading: true,
+  handleTabChange: () => {},
+  handleInputChange: () => {},
+};
 
-const SearchContext = createContext<ISearchContext | undefined>(undefined);
+const SearchContext = createContext<ISearchContext>(defaultContextValues);
 export const SearchProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {

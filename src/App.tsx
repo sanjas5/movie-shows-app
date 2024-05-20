@@ -14,15 +14,13 @@ import MoviesPage from "./components/MoviesShowsPage/MoviesPage";
 function App() {
   return (
     <SearchProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Navigate to="/shows" replace={true} />} />
-          <Route path="/movies" element={<MoviesPage />} />
-          <Route path="/shows" element={<ShowsPage />} />
-          <Route path="/movies/:id" element={<MovieDetails />} />
-          <Route path="/tv/:id" element={<ShowDetails />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/shows" replace={true} />} />
+        <Route path="/movies" element={<MoviesPage />} />
+        <Route path="/shows" element={<ShowsPage />} />
+        <Route path="/movies/:id" element={<MovieDetails />} />
+        <Route path="/tv/:id" element={<ShowDetails />} />
+      </Routes>
     </SearchProvider>
   );
 }

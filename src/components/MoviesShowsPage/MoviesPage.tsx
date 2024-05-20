@@ -1,16 +1,22 @@
 import Skeleton from "react-loading-skeleton";
 import { useSearch } from "../../context/SearchContext";
 import { IMovie } from "../../entities/IMovie";
+import noImage from "../../assets/noImage.png";
 import EmptyPage from "../EmptyPage/EmptyPage";
 import Navbar from "../Navbar/Navbar";
-import noImage from "../../assets/noImage.png";
 import "./moviesShowsPage.css";
 
 function MoviesPage() {
-  const { searchMoviesResults, loading, totalResults } = useSearch();
+  const { searchMoviesResults, totalResults, loading } = useSearch();
 
   if (totalResults === 0) return <EmptyPage />;
-  if (loading) return <Skeleton count={3} />;
+
+  if (loading)
+    return (
+      <div data-testid="skeleton-loader">
+        <Skeleton count={3} />
+      </div>
+    );
 
   return (
     <div className="mediaPage">

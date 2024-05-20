@@ -19,7 +19,9 @@ function ShowDetails() {
   return (
     <div>
       {loading ? (
-        <Skeleton />
+        <div data-testid="skeleton-loader">
+          <Skeleton count={3} />
+        </div>
       ) : (
         <div className="mediaContainer">
           <div className="mediaContent">

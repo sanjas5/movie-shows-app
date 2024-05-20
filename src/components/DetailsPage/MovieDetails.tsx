@@ -21,13 +21,15 @@ const MovieDetails = () => {
   const officialTrailer = trailer;
   trailer?.filter(
     (item: IYouTubeTrailer) =>
-      item.site === "YouTube" && item.name.toLowerCase().includes("trailer")
+      item.site === "YouTube" && item.name.toLowerCase().includes("trailer"),
   );
 
   return (
     <div>
       {loading ? (
-        <Skeleton count={3} />
+        <div data-testid="skeleton-loader">
+          <Skeleton count={3} />
+        </div>
       ) : (
         <div className="mediaContainer">
           <div className="mediaContent">
